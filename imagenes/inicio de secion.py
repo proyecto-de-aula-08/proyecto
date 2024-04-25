@@ -18,7 +18,7 @@ fondo = tk.PhotoImage(file="2.png")
 fondo1=tk.Label(ventana, image=fondo).place(x=0, y=0, relheight=1, relwidth=1)
 
        
-# funcion para registrarce
+# funcion para registrarse
 def registro():
     ventana.withdraw()
     window = tk.Toplevel()
@@ -84,11 +84,11 @@ def inicio():
 
 # botones
 # iniciar sesion
-boton1 = tk.Button(ventana, text="iniciar sesion",command=inicio, cursor="hand2", bg= boton_1, 
+boton1 = tk.Button(ventana, text="Iniciar sesion",command=inicio, cursor="hand2", bg= boton_1, 
                   width=12, relief="flat", font=("comic Sans MS",15,"bold"))
 boton1.place(x = 190, y = 156)
 # registrarce    
-boton2 = tk.Button(ventana, text="registrarce",command=registro, cursor="hand2", bg= boton_1, 
+boton2 = tk.Button(ventana, text="Registrarse",command=registro, cursor="hand2", bg= boton_1, 
                   width=12, relief="flat", font=("comic Sans MS",15,"bold"))
 boton2.place(x = 190, y = 290)
 
