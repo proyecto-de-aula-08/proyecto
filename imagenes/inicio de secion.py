@@ -84,10 +84,10 @@ def inicio():
 
 # botones
 # iniciar sesion
-boton1 = tk.Button(ventana, text="Iniciar sesion",command=inicio, cursor="hand2", bg= boton_1, 
+boton1 = tk.Button(ventana, text="Iniciar sesión",command=inicio, cursor="hand2", bg= boton_1, 
                   width=12, relief="flat", font=("comic Sans MS",15,"bold"))
 boton1.place(x = 190, y = 156)
-# registrarce    
+# registrarse    
 boton2 = tk.Button(ventana, text="Registrarse",command=registro, cursor="hand2", bg= boton_1, 
                   width=12, relief="flat", font=("comic Sans MS",15,"bold"))
 boton2.place(x = 190, y = 290)
