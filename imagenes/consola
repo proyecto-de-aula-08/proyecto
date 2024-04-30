@@ -1,0 +1,47 @@
+print("BIENVENIDO AL MENU DE INICIO")
+print("1. Iniciar sesion")
+print("2. Registrarse")
+print("3. Salir")
+opcion = int(input("Escoge una opcion: "))
+
+usuarios = {}
+
+
+def registrarse():
+    nombre = input("Ingresa tu correo electronico: ")
+    if nombre in usuarios:
+        print("El correo ya existe, por favor elija otro correo")
+        return
+    contraseña = input("Ingresa tu contraseña: ")
+    usuarios[nombre]= contraseña
+    print("Registrado exitosamente")
+
+def inicio_sesion():
+    nombre = input("Ingresa tu correo electronico: ")
+    contraseña = input("Ingresa tu contraseña: ")
+    if nombre in usuarios and usuarios[nombre] == contraseña:
+        print("Inicio de sesion exitoso")
+    else:
+        print("Usuario o contraseña incorrecta. Intente de nuevo.")
+   
+while True:
+    if opcion > 3:
+        print("Opcion incorrecta")
+
+        print("BIENVENIDO AL MENU DE INICIO")
+        print("1. Iniciar sesion")
+        print("2. Registrarse")
+        print("3. Salir")
+        opcion = int(input("Elige de nuevo: "))
+    elif opcion == 2:
+        print("Bienvenido al registro de usuario")
+        registrarse()
+        print("BIENVENIDO AL MENU DE INICIO")
+        print("1. Iniciar sesion")
+        print("2. Registrarse")
+        print("3. Salir")
+
+        opcion = int(input("Escoge una opcion:"))
+    elif opcion == 1:
+        print("Bienvenido al inicio de sesion")
+        inicio_sesion()
