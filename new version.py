@@ -7,14 +7,14 @@ def limpiar_pantalla():
 
 while True:
      
-    print("!Bienvenido¡")
-    print("1. Iniciar sesion")
-    print("2. Registrarce")
+    print("¡Bienvenido!")
+    print("1. Iniciar sesión")
+    print("2. Registrarse")
     print("3. Salir")
 
     opcion=None
     try:
-        opcion = int(input("Escoge una opcion: "))
+        opcion = int(input("Escoge una opción: "))
     except ValueError:
                       print("Error: entrada no válida. Por favor, ingresa un número válido.")
     limpiar_pantalla()
@@ -28,26 +28,26 @@ def verificar_correo(correo):
 #menu principal 
 def menu_principal():
      while True:
-         print("!Bienvenido al menu principal")
+         print("¡Bienvenido al menu principal!")
          print("")
          print("¿Que tipo de desecho deseas convertir a dinero?")
          print("")
-         print("1. Plastico")
+         print("1. Plástico")
          print("2. Hierro")
          print("3. Cobre")
          print("4. Salir")
 
          opc=int(input("¿Cual desecho tienes?: "))
          if opc==1:
-             print("Plastico")
+             print("Plástico")
              print("")    
-             print("¿Cuantos kilogramos de plastico tienes")
+             print("¿Cuantos kilogramos de plástico tienes")
              kg=float(input(": "))
 
              total = kg*300 
              limpiar_pantalla()
 
-             print("!esta es tu ganancia¡: ",total)
+             print("¡Esta es tu ganancia!: ",total)
          elif opc==2:
              print("Hierro") 
              print("")
@@ -57,7 +57,7 @@ def menu_principal():
              total=kg*1000 
              limpiar_pantalla()
 
-             print("!esta es tu ganancia¡: ", total)
+             print("¡Esta es tu ganancia!: ", total)
          elif opc==3:
              print("Cobre")
              print("")
@@ -66,17 +66,17 @@ def menu_principal():
              total=kg*10000
              limpiar_pantalla()
 
-             print("!esta es tu ganancia¡: ", total)
+             print("¡Esta es tu ganancia!: ", total)
          elif opc==4:
              limpiar_pantalla()
-             print("Adios")
+             print("Adiós")
              break
              
          
              
          
          else:
-             opc=int(input("A ocurrido un error, intentalo denuevo: "))
+             opc=int(input("Ha ocurrido un error, intentalo de nuevo: "))
 
              
              
@@ -108,16 +108,16 @@ def registrarse():
 
 # funcion para iniciar sesion 
 def inicio_sesion():
-    nombre = input("Ingresa tu correo electronico: ")
+    nombre = input("Ingresa tu correo electrónico: ")
     contraseña = getpass4.getpass("Ingresa tu contraseña: ")
     if nombre in usuarios and usuarios[nombre] == contraseña:
 
-        print("Inicio de sesion exitoso")
+        print("Inicio de sesión exitoso")
         print("")
         limpiar_pantalla()
         # aqui incluimos la funcion de menu principal ya que antes aunque fallara el correo entraba, pero ahora
-        # el correo y contraseña deben coinsidir con el registrado para poder acceder al menu principal
-        print("recicla tu dinero")
+        # el correo y contraseña deben coincidir con el registrado para poder acceder al menu principal
+        print("Recicla tu dinero")
         menu_principal()
 
     else:
@@ -139,13 +139,13 @@ def inicio_sesion():
 while True:
     if opcion ==1:
         inicio_sesion()
-        print("!Bienvenido¡")
-        print("1. Iniciar sesion")
-        print("2. Registrarce")
+        print("¡Bienvenido!")
+        print("1. Iniciar sesión")
+        print("2. Registrarse")
         print("3. Salir")
         opcion=None
         try:
-            opcion = int(input("Escoge una opcion: "))
+            opcion = int(input("Escoge una opción: "))
         except ValueError:
                           print("Error: entrada no válida. Por favor, ingresa un número válido.")
         limpiar_pantalla()
@@ -154,32 +154,32 @@ while True:
         
         
     elif opcion ==2:
-        print("!Bienvenido al registro de usuario¡")
+        print("¡Bienvenido al registro de usuario!")
         registrarse()
         print("")
-        print("!Bienvenido¡")
-        print("1. Iniciar sesion")
-        print("2. Registrarce")
+        print("¡Bienvenido!")
+        print("1. Iniciar sesión")
+        print("2. Registrarse")
         print("3. Salir") 
         print("")
 
-        opcion =int(input("escoge una opcion: "))
+        opcion =int(input("Escoge una opción: "))
 
 
     elif opcion==3:
-        print("Adios.")
+        print("Adiós.")
         break
     else:
-        print("opcion incorrecta")
+        print("Opción incorrecta")
         print("")
-        print("!Bienvenido¡")
-        print("1. Iniciar sesion")
-        print("2. Registrarce")
+        print("¡Bienvenido!")
+        print("1. Iniciar sesión")
+        print("2. Registrarse")
         print("3. Salir")
 
 
         try:
-           opcion = int(input("Escoge una opcion: "))
+           opcion = int(input("Escoge una opción: "))
         except ValueError:
            print("Error: entrada no válida. Por favor, ingresa un número válido.")
         
